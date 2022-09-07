@@ -1,7 +1,7 @@
 // @mui
 import { enUS, frFR, zhCN, viVN, arSD } from '@mui/material/locale';
 // components
-import { SettingsValueProps } from './components/settings/type';
+
 
 // LAYOUT
 // ----------------------------------------------------------------------
@@ -43,7 +43,7 @@ export const cookiesKey = {
   themeColorPresets: 'themeColorPresets',
 };
 
-export const defaultSettings: SettingsValueProps = {
+export const defaultSettings: any = {
   themeMode: 'light',
   themeDirection: 'ltr',
   themeContrast: 'default',

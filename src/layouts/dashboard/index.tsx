@@ -3,7 +3,7 @@ import { useState, ReactNode } from 'react';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 // hooks
-import useSettings from '../../hooks/useSettings';
+
 import useResponsive from '../../hooks/useResponsive';
 import useCollapseDrawer from '../../hooks/useCollapseDrawer';
 // config
@@ -49,18 +49,18 @@ type Props = {
 export default function DashboardLayout({ children }: Props) {
   const { collapseClick, isCollapse } = useCollapseDrawer();
 
-  const { themeLayout } = useSettings();
+
 
   const isDesktop = useResponsive('up', 'lg');
 
   const [open, setOpen] = useState(false);
 
-  const verticalLayout = themeLayout === 'vertical';
+  const verticalLayout = 'vertical';
 
   if (verticalLayout) {
     return (
       <>
-        <DashboardHeader onOpenSidebar={() => setOpen(true)} verticalLayout={verticalLayout} />
+        <DashboardHeader onOpenSidebar={() => setOpen(true)} />
 
         {isDesktop ? (
           <NavbarHorizontal />

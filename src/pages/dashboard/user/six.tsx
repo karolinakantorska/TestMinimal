@@ -3,7 +3,7 @@ import { Container, Typography } from '@mui/material';
 // layouts
 import Layout from '../../../layouts';
 // hooks
-import useSettings from '../../../hooks/useSettings';
+
 // components
 import Page from '../../../components/Page';
 
@@ -16,11 +16,11 @@ PageSix.getLayout = function getLayout(page: ReactElement) {
 // ----------------------------------------------------------------------
 
 export default function PageSix() {
-  const { themeStretch } = useSettings();
+
 
   return (
     <Page title="Page Six">
-      <Container maxWidth={themeStretch ? false : 'xl'}>
+      <Container maxWidth={'xl'}>
         <Typography variant="h3" component="h1" paragraph>
           Page Six
         </Typography>
