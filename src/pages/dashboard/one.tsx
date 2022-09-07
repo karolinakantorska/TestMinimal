@@ -1,11 +1,13 @@
 import { ReactElement } from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Button } from '@mui/material';
 // layouts
 import Layout from '../../layouts';
 // hooks
 import useSettings from '../../hooks/useSettings';
 // components
 import Page from '../../components/Page';
+
+import Link from 'next/link';
 
 // ----------------------------------------------------------------------
 
@@ -24,6 +26,12 @@ export default function PageOne() {
         <Typography variant="h3" component="h1" paragraph>
           Page One
         </Typography>
+        <Link href="/test">
+          <Button>
+            Push me
+          </Button>
+        </Link>
+
         <Typography gutterBottom>
           Curabitur turpis. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc,
           vitae euismod ligula urna in dolor. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
